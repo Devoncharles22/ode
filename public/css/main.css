@@ -295,7 +295,8 @@ body {
 .poem-container {
   margin: 0px;
   padding: 7px;
-  background-color: white;
+  background-color: transparent;
+  border-bottom: solid 1px #2F3131;
   text-align: left;
   clear: right; }
 
