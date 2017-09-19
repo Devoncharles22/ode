@@ -17,8 +17,8 @@
                     	       <% if(user) { %>
                     	       <form action="/new-comment" method="post">
                 	           <input type="hidden" name="poem" value="<%= poem._id %>"/>
-                	           <p><textarea name="comment" rows="2"></textarea></p>
-                	           <p><input type="submit" name="submit" value="Submit"></p>
+                	           <p><textarea  class="comment-textarea" name="comment" rows="4"></textarea></p>
+                	           <p><button type="submit" name="submit">Post</button></p>
                 	       </form>
                     		<ul>
 	                    	<% for (var i = 0; i < comments.length; i++) { %>

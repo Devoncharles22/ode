@@ -376,6 +376,7 @@ body {
   background-color: transparent;
   border-bottom: solid 1px $coal;
   text-align: left;
+  clear: right;
 }
 
 .poem-title, .poem-title a {
@@ -422,3 +423,33 @@ body {
 
 /* PROFILE CSS - END */
 /*------------------------------------------*/
+/*POEM CSS - START */
+.poem-links {
+  list-style-type: none;
+  float: right;
+  padding: 0px;
+  li {
+    font-weight: bold;
+    padding: 5px;
+    margin: 0px 5px;
+    display: inline-block;
+    border: solid 1px $flash;
+    a {
+      color: $night;
+      &:hover{
+        color: $pearl;
+      }
+    }
+    transition: .3s;
+    &:hover {
+        background-color: $flash;
+        border-radius: 3px;
+      }
+  }
+}
+
+.comment-textarea {
+  width: 100%;
+}
+
+/*POEM CSS - END */
