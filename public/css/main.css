@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background-color: transparent;
+  border: solid #000B29 1px;
+  margin: 10px;
+  width: 25%;
+  height: 42px;
+  font-size: 18px;
+  transition: .3s; }
+  button:hover {
+    background-color: #000B29;
+    color: #F8F1E5;
+    border-radius: 5px; }
+  @media only screen and (min-width: 675px) {
+    button button {
+      width: 10%; } }
+
+.view-pg-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000B29;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px; }
+
+input {
+  height: 36px;
+  width: 50%;
+  padding: 10px 15px; }
+  @media screen and (min-width: 700px) {
+    input {
+      width: 400px; } }
+
+h4 {
+  text-align: center;
+  color: #D70026; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  color: #000B29;
+  background-color: #F8F5F2; }
+
+/*------------------------------------------*/
+/* HEADER CSS - START */
+.header-wrapper {
+  background-color: #F8F5F2;
+  height: auto; }
+
+.hamburger {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 36px;
+  color: #000B29;
+  display: block; }
+  @media screen and (min-width: 641px) {
+    .hamburger {
+      display: none; } }
+
+#menu {
+  display: none; }
+  @media screen and (min-width: 700px) {
+    #menu {
+      display: block;
+      text-align: center; } }
+  #menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    #menu ul li {
+      display: block;
+      text-align: center;
+      padding: 10px; }
+      @media screen and (min-width: 700px) {
+        #menu ul li {
+          display: inline-block; } }
+      #menu ul li i {
+        padding: 5px; }
+      #menu ul li a {
+        color: #000B29;
+        transition: .3s; }
+        #menu ul li a:hover {
+          color: #EDB83D; }
+
+.header-ode {
+  margin: auto;
+  text-align: center; }
+  .header-ode a {
+    font-family: 'Meddon', cursive;
+    font-size: 54px;
+    color: #EDB83D;
+    padding: 0px 40px;
+    transition: .3s; }
+    .header-ode a:hover {
+      color: #D70026; }
+
+/* HEADER CSS - END */
+/*------------------------------------------*/
+/* INDEX CSS - START */
+.index-wrapper {
+  text-align: center;
+  position: relative;
+  min-width: 325px;
+  min-height: 425px;
+  padding: 10px; }
+  .index-wrapper .slogan {
+    font-size: 24px; }
+  .index-wrapper p {
+    font-size: 20px; }
+
+.button-container {
+  width: 325px;
+  margin: 0 auto; }
+  .button-container button {
+    min-width: 75%; }
+
+#ode-svg {
+  margin-right: 35px;
+  padding: 5px;
+  max-width: 350px; }
+  #ode-svg path {
+    fill: #EDB83D;
+    fill-opacity: 0;
+    stroke: #EDB83D;
+    stroke-width: .4px;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation-name: draw, fill;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+    animation-duration: 15s, 4s; }
+
+#deer-svg path, #owl-svg path, #squirrel-svg path, #fox-svg path, #bear-svg path {
+  fill-opacity: 0;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation-name: draw, fill;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+  animation-duration: 7s, 7s; }
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; } }
+@keyframes fill {
+  to {
+    fill-opacity: 1; } }
+.feather-svg {
+  position: absolute;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  top: -250px; }
+
+#feather-1 {
+  animation: feather-1  4s infinite linear; }
+
+#feather-2 {
+  animation: feather-2 4s  infinite linear;
+  animation-delay: 3s; }
+
+#feather-3 {
+  animation: feather-3 4s infinite linear;
+  animation-delay: 4s; }
+
+#feather-4 {
+  animation: feather-4 4s infinite linear;
+  animation-delay: 5s; }
+
+@keyframes feather-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px) rotateZ(0deg); }
+  75% {
+    opacity: .5;
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(150px, 700px) rotateZ(360deg); } }
+@keyframes feather-2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px) rotateZ(0deg); }
+  75% {
+    opacity: .5;
+    -webkit-transform: translate(-200px, 650px) rotateZ(180deg); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-250px, 725px) rotateZ(270deg); } }
+@keyframes feather-3 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px) rotateZ(0deg); }
+  75% {
+    opacity: .5;
+    -webkit-transform: translate(-100px, 600px) rotateZ(90deg); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 750px) rotateZ(180deg); } }
+@keyframes feather-4 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px) rotateZ(0deg); }
+  75% {
+    opacity: .5;
+    -webkit-transform: translate(-50px, 450px) rotateZ(90deg); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(50px, 650px) rotateZ(180deg); } }
+/* INDEX SCSS - END */
+/*------------------------------------------*/
+/*LOGIN SCSS - START */
+.login-wrapper {
+  text-align: center;
+  margin-top: 10px; }
+
+#fox-svg {
+  width: 100px;
+  padding: 10px; }
+
+.login-form-fields {
+  padding: 10px; }
+  .login-form-fields label {
+    padding-right: 5px; }
+  .login-form-fields input {
+    background-color: transparent;
+    border: solid #000B29 1px; }
+
+.login-alt-options a {
+  color: #D70026;
+  font-size: 20px;
+  padding: 10px;
+  transition: .3s; }
+  .login-alt-options a:hover {
+    text-decoration: underline;
+    padding: 7px; }
+
+/* LOGIN SCSS - END */
+/*------------------------------------------*/
+/* SIGNUP SCSS - START */
+#deer-svg {
+  width: 100px;
+  padding: 10px 10px 0px 10px;
+  margin-top: 17px; }
+
+.sign-up-wrapper {
+  text-align: center; }
+  .sign-up-wrapper h1 {
+    font-family: 'Meddon', cursive;
+    font-size: 36px;
+    margin: auto; }
+  .sign-up-wrapper h4 {
+    font-size: 18px;
+    margin: auto;
+    padding: 5px; }
+
+.signup-alt-options a {
+  color: #D70026;
+  font-size: 20px;
+  padding: 10px;
+  transition: .3s; }
+  .signup-alt-options a:hover {
+    text-decoration: underline;
+    padding: 7px; }
+
+/* SIGNUP SCSS - END */
+/*------------------------------------------*/
+/* FEED SCSS - START */
+.feed-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 15px 15px 15px;
+  width: 90%;
+  text-align: center; }
+  @media only screen and (min-width: 675px) {
+    .feed-wrapper {
+      width: 80%; } }
+
+#owl-svg, #squirrel-svg, #bear-svg {
+  display: block;
+  padding: 0px 10px;
+  width: 100px;
+  margin: 0 auto; }
+
+.poem-container {
+  margin: 0px;
+  padding: 7px;
+  background-color: transparent;
+  border-bottom: solid 1px #2F3131;
+  text-align: left; }
+
+.poem-title, .poem-title a {
+  color: #D70026;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 24px; }
+
+.poem-content {
+  margin: auto; }
+
+.poem-date {
+  font-style: italic;
+  font-size: 14px; }
+
+/* FEED CSS - END */
+/*------------------------------------------*/
+/* PROFILE CSS - START */
+.profile-wrapper {
+  max-width: 75%;
+  margin: 0 auto;
+  Left: 10px; }
+
+.profile-img-background {
+  text-align: center;
+  margin: auto;
+  height: 100px;
+  width: 90%;
+  border-bottom: solid #2F3131 1px; }
+  @media only screen and (min-width: 675px) {
+    .profile-img-background {
+      width: 80%; } }
+
+.img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  margin: auto; }
+
+/* PROFILE CSS - END */
+/*------------------------------------------*/
+/*NEW POEM CSS - START */
+.new-poem-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 15px 15px 15px;
+  width: 90%;
+  text-align: center; }
+  @media only screen and (min-width: 675px) {
+    .new-poem-wrapper {
+      width: 80%; } }
+
+/*NEW POEM CSS - END */
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="sign-up-wrapper">
+	<% include partials/deer-svg %>
+	<h1>Welcome!</h1>
+	<h4>Let's see what you can do</h4>
+	<!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+	<!-- LOGIN FORM -->
+	<form action="/signup" method="post">
+		<div class="login-form-fields">
+			<input type="text" class="form-control" name="email" placeholder="Your email" required>
+		</div>
+		<div class="login-form-fields">
+			<input type="password" class="form-control" name="password" placeholder="Your password">
+		</div>
+		<button type="submit" class="sign-up-btn">Signup</button>
+	</form>
+	<div class="signup-alt-options">
+		<p>Already have an account?<a href="/login">Login</a></p>
+		<p>Or Journey...<a href="/">Home</a></p>
+	</div>
+</div>
+<% include partials/footer %>

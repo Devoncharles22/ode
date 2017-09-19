@@ -1,0 +1,21 @@
+<% include partials/header %>
+<div class="new-poem-wrapper">
+	<% if(poem) { %>
+		<%include partials/bear-svg %>
+		<h1 class="view-pg-title">Edit Away!</h1>
+		<form action="/poem-update" method="post">
+		<input type="hidden" name="_id" value="<%=poem._id%>"/>
+		<p><input type="text" name="title" placeholder="title" value="<%=poem.title%>"></p>
+		<p><textarea name="content" id="ck-editor"><%=poem.content%></textarea></p>
+		<p><button type="submit" name="submit">Update</button></p>
+	<% } else { %>
+		<%include partials/squirrel-svg %>
+		<h1 class="view-pg-title">Draft Away!</h1>
+		<form action="/poem" method="post">
+		<p><input type="text" name="title" placeholder="title"></p>
+		<p><textarea name="content" id="ck-editor"></textarea></p>
+		<p><button type="submit" name="submit">Create</button></p>
+	<% } %>
+		</form>
+</div>
+<% include partials/footer %>

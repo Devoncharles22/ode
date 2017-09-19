@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="poem-wrapper">
+                <div class="poem-container">
+                    <% if(user._id == poem.author) {%>
+                        <ul class="poem-links">
+                            <li><a href="/poem/edit/<%= poem._id %>">Edit</a></li>
+                            <li><a href="/poem/delete/<%= poem._id %>">Delete</a></li>
+                        </ul>
+                    <% } %>
+                    <h3 class="poem-title"><%= poem.title %></h3>
+                    <p class="poem-content"><%- poem.content %></p>
+                    <p class="poem-date"><%= poem.created.toDateString() %> | <span class="poem-author"><%= authors[poem.author]%></span></p>
+                        <div class="comments-container">
+                    	<hr/>
+                    	   <h4>Comments - <%=comments.length%></h4>
+                    	       <% if(user) { %>
+                    	       <form action="/new-comment" method="post">
+                	           <input type="hidden" name="poem" value="<%= poem._id %>"/>
+                	           <p><textarea name="comment" rows="2"></textarea></p>
+                	           <p><input type="submit" name="submit" value="Submit"></p>
+                	       </form>
+                    		<ul>
+	                    	<% for (var i = 0; i < comments.length; i++) { %>
+	                    	  <li><%=authors[comments[i].author]%> - <%=comments[i].content%></li>
+	                    	  <% } %>
+                    		</ul>
+                    	               <% } else { %>
+                    		<p>Cannot leave comments unless <a href="/login">logged in </a></p>
+                                          <% } %>
+                    	</div>
+                </div>
+  </div>
+<% include partials/footer %>

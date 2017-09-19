@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="login-wrapper">
+	<% include partials/fox-svg %>
+	<!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+	<!-- LOGIN FORM -->
+	<form action="/login" method="post">
+		<div class="login-form-fields">
+			<input type="text" class="form-control" name="email" placeholder="Your email">
+		</div>
+		<div class="login-form-fields">
+			<input type="password" class="form-control" name="password" placeholder="Your password">
+		</div>
+		<button type="submit" class="login-btn">Login</button>
+	</form>
+	<div class="login-alt-options">
+		<p>Need an account?<a href="/signup">Signup</a></p>
+		<p>Or journey...<a href="/">Home</a></p>
+	</div>
+</div>
+<% include partials/footer %>
