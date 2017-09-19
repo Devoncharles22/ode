@@ -276,14 +276,14 @@ body {
 /* SIGNUP SCSS - END */
 /*------------------------------------------*/
 /* FEED SCSS - START */
-.feed-wrapper {
+.feed-wrapper, .new-poem-wrapper, .poem-wrapper {
   height: auto;
   margin: 0 auto;
   padding: 0px 15px 15px 15px;
   width: 90%;
   text-align: center; }
   @media only screen and (min-width: 675px) {
-    .feed-wrapper {
+    .feed-wrapper, .new-poem-wrapper, .poem-wrapper {
       width: 80%; } }
 
 #owl-svg, #squirrel-svg, #bear-svg {
@@ -338,17 +338,5 @@ body {
 
 /* PROFILE CSS - END */
 /*------------------------------------------*/
-/*NEW POEM CSS - START */
-.new-poem-wrapper {
-  height: auto;
-  margin: 0 auto;
-  padding: 0px 15px 15px 15px;
-  width: 90%;
-  text-align: center; }
-  @media only screen and (min-width: 675px) {
-    .new-poem-wrapper {
-      width: 80%; } }
-
-/*NEW POEM CSS - END */
 
 /*# sourceMappingURL=main.css.map */
