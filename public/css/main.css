@@ -1,6 +1,17 @@
 * {
   box-sizing: border-box; }
 
+.feed-wrapper, .create-wrapper, .poem-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 15px 15px 15px;
+  width: 90%;
+  text-align: center;
+  border-radius: 4px; }
+  @media only screen and (min-width: 675px) {
+    .feed-wrapper, .create-wrapper, .poem-wrapper {
+      width: 80%; } }
+
 a {
   text-decoration: none; }
 
@@ -32,13 +43,15 @@ input {
   height: 36px;
   width: 50%;
   padding: 10px 15px; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 675px) {
     input {
       width: 400px; } }
 
 h4 {
   text-align: center;
-  color: #D70026; }
+  color: #D70026;
+  padding-top: 15px;
+  margin: 0; }
 
 body {
   margin: 0px;
@@ -51,8 +64,28 @@ body {
 /*------------------------------------------*/
 /* HEADER CSS - START */
 .header-wrapper {
-  background-color: #F8F5F2;
-  height: auto; }
+  background-color: #F8F5F2; }
+
+.create-header .create-menu-item a {
+  color: #598234 !important; }
+  .create-header .create-menu-item a:hover {
+    color: #EDB83D !important; }
+  .create-header .create-menu-item a i {
+    font-weight: bold; }
+
+.feed-header .feed-menu-item a {
+  color: #D70026 !important; }
+  .feed-header .feed-menu-item a:hover {
+    color: #EDB83D !important; }
+  .feed-header .feed-menu-item a i {
+    font-weight: bold; }
+
+.profile-header .profile-menu-item a {
+  color: #EDB83D !important; }
+  .profile-header .profile-menu-item a:hover {
+    color: #EDB83D !important; }
+  .profile-header .profile-menu-item a i {
+    font-weight: bold; }
 
 .hamburger {
   position: absolute;
@@ -61,13 +94,13 @@ body {
   font-size: 36px;
   color: #000B29;
   display: block; }
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 675px) {
     .hamburger {
       display: none; } }
 
 #menu {
   display: none; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 675px) {
     #menu {
       display: block;
       text-align: center; } }
@@ -81,7 +114,7 @@ body {
       display: block;
       text-align: center;
       padding: 10px; }
-      @media screen and (min-width: 700px) {
+      @media screen and (min-width: 675px) {
         #menu ul li {
           display: inline-block; } }
       #menu ul li i {
@@ -120,9 +153,12 @@ body {
 
 .button-container {
   width: 325px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 5px; }
   .button-container button {
     min-width: 75%; }
+    .button-container button i {
+      padding: 5px; }
 
 #ode-svg {
   margin-right: 35px;
@@ -140,14 +176,19 @@ body {
     animation-delay: .4s;
     animation-duration: 15s, 4s; }
 
-#deer-svg path, #owl-svg path, #squirrel-svg path, #fox-svg path, #bear-svg path {
-  fill-opacity: 0;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation-name: draw, fill;
-  animation-fill-mode: forwards;
-  animation-delay: .4s;
-  animation-duration: 7s, 7s; }
+#deer-svg, #owl-svg, #squirrel-svg, #fox-svg, #bear-svg {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 0px 5px 15px 5px; }
+  #deer-svg path, #owl-svg path, #squirrel-svg path, #fox-svg path, #bear-svg path {
+    fill-opacity: 0;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation-name: draw, fill;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+    animation-duration: 7s, 7s; }
 
 @keyframes draw {
   to {
@@ -163,18 +204,18 @@ body {
   top: -250px; }
 
 #feather-1 {
-  animation: feather-1  4s infinite linear; }
+  animation: feather-1  8s infinite linear; }
 
 #feather-2 {
-  animation: feather-2 4s  infinite linear;
+  animation: feather-2 8s  infinite linear;
   animation-delay: 3s; }
 
 #feather-3 {
-  animation: feather-3 4s infinite linear;
+  animation: feather-3 8s infinite linear;
   animation-delay: 4s; }
 
 #feather-4 {
-  animation: feather-4 4s infinite linear;
+  animation: feather-4 8s infinite linear;
   animation-delay: 5s; }
 
 @keyframes feather-1 {
@@ -186,7 +227,7 @@ body {
     -webkit-transform: translate(100px, 600px) rotateZ(270deg); }
   100% {
     opacity: 0;
-    -webkit-transform: translate(150px, 700px) rotateZ(360deg); } }
+    -webkit-transform: translate(150px, 675px) rotateZ(360deg); } }
 @keyframes feather-2 {
   0% {
     opacity: 1;
@@ -270,32 +311,15 @@ body {
   padding: 10px;
   transition: .3s; }
   .signup-alt-options a:hover {
-    text-decoration: underline;
+    font-weight: bold;
     padding: 7px; }
 
 /* SIGNUP SCSS - END */
 /*------------------------------------------*/
 /* FEED SCSS - START */
-.feed-wrapper, .new-poem-wrapper, .poem-wrapper {
-  height: auto;
-  margin: 0 auto;
-  padding: 0px 15px 15px 15px;
-  width: 90%;
-  text-align: center; }
-  @media only screen and (min-width: 675px) {
-    .feed-wrapper, .new-poem-wrapper, .poem-wrapper {
-      width: 80%; } }
-
-#owl-svg, #squirrel-svg, #bear-svg {
-  display: block;
-  padding: 0px 10px;
-  width: 100px;
-  margin: 0 auto; }
-
 .poem-container {
   margin: 0px;
   padding: 7px;
-  background-color: transparent;
   border-bottom: solid 1px #2F3131;
   text-align: left;
   clear: right; }
@@ -317,25 +341,34 @@ body {
 /*------------------------------------------*/
 /* PROFILE CSS - START */
 .profile-wrapper {
-  max-width: 75%;
-  margin: 0 auto;
-  Left: 10px; }
+  max-width: 80%;
+  margin: 0 auto; }
 
 .profile-img-background {
   text-align: center;
-  margin: auto;
-  height: 100px;
-  width: 90%;
-  border-bottom: solid #2F3131 1px; }
-  @media only screen and (min-width: 675px) {
-    .profile-img-background {
-      width: 80%; } }
-
-.img {
+  margin: 0px auto 10px auto;
   height: 75px;
   width: 75px;
-  border-radius: 50%;
+  background-size: 100%;
+  border-radius: 50%; }
+  @media only screen and (min-width: 675px) {
+    .profile-img-background {
+      width: 75px; } }
+
+.avatar-img {
+  cursor: pointer; }
+  .avatar-img.selected {
+    border: 1px solid red; }
+
+.profile-info-container {
+  width: 90%;
+  min-height: 100px;
+  border: solid 1px #000B29;
+  border-radius: 3px;
   margin: auto; }
+  .profile-info-container p {
+    text-align: center;
+    font-weight: bold; }
 
 /* PROFILE CSS - END */
 /*------------------------------------------*/

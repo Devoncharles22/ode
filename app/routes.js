@@ -30,6 +30,7 @@ app.get('/feed', isLoggedIn, function(req, res) {
 						author_ids.push(poems[i].author);
 					}
 				}
+				poems.reverse( );
 				return poems;
 			}).then(function(poems){
 				console.log('----author_ids---',author_ids);
@@ -45,7 +46,18 @@ app.get('/feed', isLoggedIn, function(req, res) {
 			// Poem.find({},function(err,poems){
 			// 	res.render('feed.ejs',{poems:poems});
 			// });
-})
+});
+
+app.get('/authors',function(req,res){
+	User.find({bio:'whatever'},function(err,data){
+		if(!err){
+			res.send(data);
+		} else {
+			res.send(err);
+		}
+		
+	});
+});
 
 	//  POEM SECTION==============
 	app.get('/poem/:id', isLoggedIn, function(req,res){
@@ -68,14 +80,14 @@ app.get('/feed', isLoggedIn, function(req, res) {
 			});
 		});
 	});
-	app.get('/new-poem', isLoggedIn, function(req, res) {
-		res.render('poem-form.ejs',{poem:''});
+	app.get('/create', isLoggedIn, function(req, res) {
+		res.render('create.ejs',{poem:''});
 	});
 
 	app.get('/poem/edit/:id',isLoggedIn,function(req,res){
 		Poem.findOne({_id:req.params.id},function(err,poem){
 			if(poem.author == req.user._id){
-				res.render('poem-form.ejs',{poem:poem});
+				res.render('create.ejs',{poem:poem});
 			} else {
 				res.redirect('/poem/'+req.params.id);
 			}
@@ -132,6 +144,16 @@ app.get('/feed', isLoggedIn, function(req, res) {
 				user : req.user,
 				poems: poems
 			});
+		});
+	});
+
+	app.get('/edit-profile', isLoggedIn, function(req,res){
+		res.render('edit-profile.ejs',{user:req.user});
+	});
+
+	app.post('/edit-profile', isLoggedIn, function(req,res){
+		User.findOneAndUpdate({_id:req.user._id}, {$set:{bio:req.body.bio, avatar:req.body.avatar}}, {new: true}, function(err,user){
+			res.redirect('/profile');
 		});
 	});
 

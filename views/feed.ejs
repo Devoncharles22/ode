@@ -1,7 +1,8 @@
+<div class="feed-header">
 <% include partials/header %>
+</div>
 <div class="feed-wrapper">
     <%include partials/owl-svg %>
-        <h1 class="view-pg-title">The Feed</h1>
         <% for(var i=0; i< poems.length; i++) { %>
                 <div class="poem-container">
                     <h3 class="poem-title"><a href="/poem/<%=poems[i]._id%>"><%= poems[i].title %></a></h3>

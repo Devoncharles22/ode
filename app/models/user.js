@@ -21,6 +21,8 @@ var userSchema = mongoose.Schema({
         displayName : String,
         username : String
     },
+    bio: {type: String, default: 'No bio as of yet'},
+    avatar: {type: String, default: '1'}
 });
 
 // methods ======================

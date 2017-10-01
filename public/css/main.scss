@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.feed-wrapper, .create-wrapper, .poem-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 15px 15px 15px;
+  width: 90%;
+  text-align: center;
+  border-radius: 4px;
+   @media only screen and (min-width: 675px) {
+     width: 80%;
+    }
+}
+
 a {
   text-decoration: none;
 }
@@ -26,7 +38,6 @@ button {
      width: 10%;
     }
   }
-
 }
 
 .view-pg-title {
@@ -42,7 +53,7 @@ input {
   height: 36px;
   width: 50%;
   padding: 10px 15px;
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 675px){
     width: 400px;
   }
 }
@@ -50,6 +61,8 @@ input {
   h4 {
     text-align: center;
     color: $phoneboothred;
+    padding-top: 15px;
+    margin: 0;
   }
 
 body {
@@ -64,8 +77,44 @@ body {
 /* HEADER CSS - START */
 .header-wrapper {
   background-color: $pearl;
-  height: auto;
 }
+
+.create-header {
+  .create-menu-item a { 
+    color: $meadow !important;
+    &:hover {
+      color: $flash !important;
+    }
+    i {
+      font-weight: bold;
+    }
+  }
+}
+
+.feed-header {
+  .feed-menu-item a { 
+    color: $phoneboothred !important;
+    &:hover {
+      color: $flash !important;
+    }
+    i {
+      font-weight: bold;
+    }
+  }
+}
+
+.profile-header {
+  .profile-menu-item a {
+    color: $flash !important;
+    &:hover {
+      color: $flash !important;
+    }
+    i {
+      font-weight: bold;
+    }
+  }
+}
+
 
 .hamburger {
   position: absolute;
@@ -74,14 +123,14 @@ body {
   font-size: 36px;
   color: $night;
   display:block;
-  @media screen and (min-width: 641px){
+  @media screen and (min-width: 675px){
     display: none;
   }
 }
 
 #menu {
   display: none;
-   @media screen and (min-width: 700px) {
+   @media screen and (min-width: 675px) {
     display: block;
     text-align: center;
   }
@@ -95,7 +144,7 @@ body {
       display: block;
       text-align:center;
       padding: 10px;
-       @media screen and (min-width: 700px) {
+       @media screen and (min-width: 675px) {
           display: inline-block;
         }
       i {
@@ -147,8 +196,12 @@ body {
 .button-container {
   width: 325px;
   margin: 0 auto;
+  padding: 5px;
   button {
     min-width: 75%;
+    i {
+      padding: 5px
+    }
     }
   }
 
@@ -171,6 +224,10 @@ body {
    }
 
   #deer-svg, #owl-svg, #squirrel-svg, #fox-svg, #bear-svg {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 0px 5px 15px 5px;
   path {
   fill-opacity: 0;
   stroke-dasharray: 2000;
@@ -203,21 +260,21 @@ body {
 }
 
 #feather-1 {
-  animation: feather-1  4s infinite linear;
+  animation: feather-1  8s infinite linear;
 }
 
 #feather-2 {
-  animation: feather-2 4s  infinite linear;
+  animation: feather-2 8s  infinite linear;
   animation-delay: 3s;
 }
 
 #feather-3 {
-  animation: feather-3 4s infinite linear;
+  animation: feather-3 8s infinite linear;
   animation-delay: 4s;
 }
 
 #feather-4 {
-  animation: feather-4 4s infinite linear;
+  animation: feather-4 8s infinite linear;
   animation-delay: 5s;
 }
 
@@ -232,7 +289,7 @@ body {
   } 
   100% {
     opacity: 0;
-    -webkit-transform: translate(150px, 700px) rotateZ(360deg);
+    -webkit-transform: translate(150px, 675px) rotateZ(360deg);
       }
 }
 
@@ -345,35 +402,17 @@ body {
   padding: 10px;
   transition: .3s;
   &:hover {
-    text-decoration: underline;
+    font-weight: bold;
     padding: 7px;
   }
 }
 /* SIGNUP SCSS - END */
 /*------------------------------------------*/
 /* FEED SCSS - START */
-.feed-wrapper, .new-poem-wrapper, .poem-wrapper {
-  height: auto;
-  margin: 0 auto;
-  padding: 0px 15px 15px 15px;
-  width: 90%;
-  text-align: center;
-   @media only screen and (min-width: 675px) {
-     width: 80%;
-    }
-}
-
-#owl-svg, #squirrel-svg, #bear-svg {
-  display: block;
-  padding: 0px 10px;
-  width: 100px;
-  margin: 0 auto;
-}
 
 .poem-container {
   margin: 0px;
   padding: 7px;
-  background-color: transparent;
   border-bottom: solid 1px $coal;
   text-align: left;
   clear: right;
@@ -399,26 +438,38 @@ body {
 /*------------------------------------------*/
 /* PROFILE CSS - START */
 .profile-wrapper {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
-  Left: 10px;
 }
 .profile-img-background {
   text-align: center;
-  margin: auto;
-  height: 100px;
-  width: 90%;
-  border-bottom: solid $coal 1px;
+  margin: 0px auto 10px auto;
+  height: 75px;
+  width: 75px;
+  background-size: 100%;
+  border-radius: 50%;
   @media only screen and (min-width: 675px) {
-     width: 80%;
+     width: 75px;
     }
 }
 
-.img {
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
+.avatar-img {
+  cursor: pointer;
+  &.selected {
+    border: 1px solid red;
+  }
+}
+
+.profile-info-container {
+  width: 90%;
+  min-height: 100px;
+  border: solid 1px $night;
+  border-radius: 3px; 
   margin: auto;
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 /* PROFILE CSS - END */

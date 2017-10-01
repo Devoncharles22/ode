@@ -1,0 +1,22 @@
+<div class="profile-header">
+<% include partials/header %>
+</div>
+	<div class="profile-wrapper">
+	<form method="post" action="/edit-profile">
+	  <p>Choose your avatar</p>
+	  <ul class="profile-avatars">
+	  		<% for(var i=1; i<6; i++){ %>
+	  				<% if(i == user.avatar) { %>
+						<li><img class="avatar-img selected" src="/img/avatars/<%=i%>.png" width="50" data-avatar="<%=i%>"/></li>
+					<% } else { %>
+						<li><img class="avatar-img" src="/img/avatars/<%=i%>.png" width="50" data-avatar="<%=i%>"/></li>
+					<% } %>
+	  		<% } %>
+	  	</ul>
+	  	<input type="hidden" name="avatar" class="avatar-input" value="<%= user.avatar %>"/>
+	    <p><textarea name="bio"><%= user.bio %></textarea></p>
+	    <p><input type="submit" name="submit" value="Update Profile"/></p>
+	 </form>
+   </div>
+ </div>
+ <% include partials/footer %>
