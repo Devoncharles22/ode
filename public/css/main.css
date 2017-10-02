@@ -326,7 +326,6 @@ body {
 
 .poem-title, .poem-title a {
   color: #D70026;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   font-size: 24px; }
 
@@ -355,17 +354,16 @@ body {
     .profile-img-background {
       width: 75px; } }
 
-.avatar-img {
-  cursor: pointer; }
-  .avatar-img.selected {
-    border: 1px solid red; }
-
 .profile-info-container {
   width: 90%;
   min-height: 100px;
   background-color: transparent;
   border-bottom: solid 1px #2F3131;
   margin: auto; }
+  .profile-info-container h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #EDB83D; }
   .profile-info-container p {
     text-align: center;
     font-weight: bold;
@@ -373,6 +371,8 @@ body {
   .profile-info-container a {
     float: right;
     padding: 5px;
+    margin: 5px;
+    font-size: 12px;
     font-weight: bold;
     border: solid 1px #EDB83D;
     color: #000B29;
@@ -383,6 +383,45 @@ body {
       border-radius: 4px; }
 
 /* PROFILE CSS - END */
+/* EDIT-PROFILE CSS - START */
+#profile-wrapper {
+  width: 75%;
+  border-radius: 4px;
+  margin: auto; }
+  #profile-wrapper form p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #EDB83D;
+    text-align: center;
+    padding: 15px 5px 0px 5px; }
+  #profile-wrapper form textarea {
+    margin: 25px 12.5%;
+    width: 75%;
+    min-height: 100px;
+    border: none;
+    border-radius: 4px; }
+    @media only screen and (min-width: 675px) {
+      #profile-wrapper form textarea {
+        width: 50%;
+        margin: 25px 25%; } }
+
+.profile-avatars {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center; }
+  .profile-avatars li {
+    display: inline-block; }
+  .profile-avatars .avatar-img {
+    cursor: pointer;
+    float: center;
+    border-radius: 50%;
+    margin: 10px 25px; }
+    .profile-avatars .avatar-img.selected {
+      border: 2px solid #D70026; }
+
+/* EDIT-PROFILE CSS - END */
 /*------------------------------------------*/
 /*POEM CSS - START */
 .poem-links {

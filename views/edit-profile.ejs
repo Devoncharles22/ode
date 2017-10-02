@@ -1,9 +1,9 @@
 <div class="profile-header">
 <% include partials/header %>
 </div>
-	<div class="profile-wrapper">
+	<div id="profile-wrapper">
 	<form method="post" action="/edit-profile">
-	  <p>Choose your avatar</p>
+	  <p>Choose Your Avatar</p>
 	  <ul class="profile-avatars">
 	  		<% for(var i=1; i<6; i++){ %>
 	  				<% if(i == user.avatar) { %>
@@ -14,8 +14,8 @@
 	  		<% } %>
 	  	</ul>
 	  	<input type="hidden" name="avatar" class="avatar-input" value="<%= user.avatar %>"/>
-	    <p><textarea name="bio"><%= user.bio %></textarea></p>
-	    <p><input type="submit" name="submit" value="Update Profile"/></p>
+	    <textarea name="bio" placeholder="Bio"><%= user.bio %></textarea>
+	    <p class="p-input"><input type="submit" name="submit" value="Update Profile"/></p>
 	 </form>
    </div>
  </div>
