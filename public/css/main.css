@@ -363,12 +363,24 @@ body {
 .profile-info-container {
   width: 90%;
   min-height: 100px;
-  border: solid 1px #000B29;
-  border-radius: 3px;
+  background-color: transparent;
+  border-bottom: solid 1px #2F3131;
   margin: auto; }
   .profile-info-container p {
     text-align: center;
-    font-weight: bold; }
+    font-weight: bold;
+    clear: right; }
+  .profile-info-container a {
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    border: solid 1px #EDB83D;
+    color: #000B29;
+    transition: .3s; }
+    .profile-info-container a:hover {
+      color: #F8F5F2;
+      background-color: #EDB83D;
+      border-radius: 4px; }
 
 /* PROFILE CSS - END */
 /*------------------------------------------*/
@@ -383,14 +395,15 @@ body {
     margin: 0px 5px;
     display: inline-block;
     border: solid 1px #EDB83D;
+    color: #000B29;
     transition: .3s; }
     .poem-links li a {
       color: #000B29; }
-      .poem-links li a:hover {
-        color: #F8F5F2; }
     .poem-links li:hover {
       background-color: #EDB83D;
       border-radius: 3px; }
+      .poem-links li:hover a {
+        color: #F8F5F2; }
 
 .comment-textarea {
   width: 100%; }

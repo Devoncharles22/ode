@@ -3,12 +3,12 @@
 <% include partials/header %>
 </div>
 <div class="profile-wrapper">
-    <a href="/edit-profile">Edit Profile</a>
   <div class="profile-img-background" style="background-image: url('/img/avatars/<%=user.avatar%>.png')">
         <!--IMG HEREs-->
     <!-- <img src="../img/ode-profile-pic.jpg" class="img" alt="profile pic" height="75px" width="75px"/> -->
 </div>
     <div class="profile-info-container">
+        <a href="/edit-profile">Edit Profile</a>
     <!--BIO HERE-->
     <p><%= user.bio %></p>
     </div>

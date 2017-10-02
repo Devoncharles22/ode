@@ -4,8 +4,8 @@
                 <div class="poem-container">
                     <% if(user._id == poem.author) {%>
                         <ul class="poem-links">
-                            <li><a href="/poem/edit/<%= poem._id %>">Edit</a></li>
-                            <li><a href="/poem/delete/<%= poem._id %>">Delete</a></li>
+                            <li><a class="edit" href="/poem/edit/<%= poem._id %>">Edit</a></li>
+                            <li><a  class="delete" href="/poem/delete/<%= poem._id %>">Delete</a></li>
                         </ul>
                     <% } %>
                     <h3 class="poem-title"><%= poem.title %></h3>
