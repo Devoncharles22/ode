@@ -447,7 +447,9 @@ body {
         color: #F8F5F2; }
 
 .comment-textarea {
-  width: 100%; }
+  width: 100%; 
+  border: none;
+  }
 
 /*POEM CSS - END */
 
