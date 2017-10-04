@@ -34,7 +34,7 @@ button {
 .view-pg-title {
   font-size: 32px;
   font-weight: bold;
-  color: #000B29;
+  color: #598234;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px; }
@@ -145,7 +145,8 @@ body {
   position: relative;
   min-width: 325px;
   min-height: 425px;
-  padding: 10px; }
+  padding: 10px;
+  margin-top: 35px; }
   .index-wrapper .slogan {
     font-size: 24px; }
   .index-wrapper p {
@@ -418,7 +419,6 @@ body {
     float: center;
     border-radius: 50%;
     margin: 10px 25px; 
-    transition: {500};
     }
     .profile-avatars .avatar-img.selected {
       border: 3.5px solid #AEBD38; }
