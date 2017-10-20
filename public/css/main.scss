@@ -2,6 +2,11 @@
 
 * {
   box-sizing: border-box;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 600;
 }
 
 .feed-wrapper, .create-wrapper, .poem-wrapper {
@@ -42,8 +47,7 @@ button {
 
 .view-pg-title {
   font-size: 32px;
-  font-weight: bold;
-  color: $night;
+  color: $meadow;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -410,6 +414,16 @@ body {
 /*------------------------------------------*/
 /* FEED SCSS - START */
 
+.col {
+  width: 45%; 
+  margin: 0 2.5%;
+  float: left;
+  @media screen and (max-width: 675px){
+    width: 95%;
+    float: none;
+  }
+}
+
 .poem-container {
   margin: 0px;
   padding: 7px;
@@ -466,7 +480,6 @@ body {
   }
   p {
     text-align: center;
-    font-weight: bold;
     clear: right;
   }
    a {
@@ -474,10 +487,10 @@ body {
     padding: 5px;
     margin: 5px;
     font-size: 12px;
-    font-weight: bold;
     border: solid 1px $flash;
     color: $night;
     transition: .3s;
+    font-weight: 600;
     &:hover {
       color: $pearl;
       background-color: $flash;
@@ -529,7 +542,7 @@ border-radius: 4px;
     border-radius: 50%;
     margin: 10px 25px;
     &.selected {
-      border: 2px solid $phoneboothred;
+      border: 2px solid $moss;
     }
   }
 }

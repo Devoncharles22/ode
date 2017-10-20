@@ -14,8 +14,8 @@
 	  		<% } %>
 	  	</ul>
 	  	<input type="hidden" name="avatar" class="avatar-input" value="<%= user.avatar %>"/>
-	    <textarea name="bio" placeholder="Bio"><%= user.bio %></textarea>
-	    <p class="p-input"><input type="submit" name="submit" value="Update Profile"/></p>
+	    <textarea id="ck-editor" name="bio" placeholder="Bio"><%= user.bio %></textarea>
+	    <p class="p-input"><button type="submit">Update Profile</button></p>
 	 </form>
    </div>
  </div>

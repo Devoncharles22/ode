@@ -3,12 +3,24 @@
 </div>
 <div class="feed-wrapper">
     <%include partials/owl-svg %>
-        <% for(var i=0; i< poems.length; i++) { %>
+    	<div class="col">
+        <% for(var i=0; i< (Math.round(poems.length/2)); i++) { %>
                 <div class="poem-container">
                     <h3 class="poem-title"><a href="/poem/<%=poems[i]._id%>"><%= poems[i].title %></a></h3>
                     <p class="poem-content"><%- poems[i].content %></p>
                     <p class="poem-date"><%= poems[i].created.toDateString() %> | <span class="poem-author"><%= authors[poems[i].author]%></span></p>
                 </div>
         <% } %>
+        </div>
+
+        <div class="col">
+        <% for(var i=(Math.floor(poems.length/2)); i< poems.length; i++) { %>
+                <div class="poem-container">
+                    <h3 class="poem-title"><a href="/poem/<%=poems[i]._id%>"><%= poems[i].title %></a></h3>
+                    <p class="poem-content"><%- poems[i].content %></p>
+                    <p class="poem-date"><%= poems[i].created.toDateString() %> | <span class="poem-author"><%= authors[poems[i].author]%></span></p>
+                </div>
+        <% } %>
+        </div>
     </div>
 <% include partials/footer %>
