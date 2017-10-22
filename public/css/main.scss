@@ -29,7 +29,7 @@ button {
   background-color: transparent;
   border: solid $night 1px;
   margin: 10px;
-  width: 25%;
+  width: 35%;
   height: 42px;
   font-size: 18px;
   transition: .3s;
@@ -40,7 +40,7 @@ button {
   }
   @media only screen and (min-width: 675px){
     button {
-     width: 10%;
+     width: 15%;
     }
   }
 }
@@ -435,6 +435,7 @@ body {
 .poem-title, .poem-title a {
   color:$phoneboothred;
   font-size: 24px;
+  font-weight: 400;
 }
 
 .poem-content {

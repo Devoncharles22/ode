@@ -23,7 +23,7 @@ button {
   background-color: transparent;
   border: solid #000B29 1px;
   margin: 10px;
-  width: 25%;
+  width: 35%;
   height: 42px;
   font-size: 18px;
   transition: .3s; }
@@ -33,7 +33,7 @@ button {
     border-radius: 5px; }
   @media only screen and (min-width: 675px) {
     button button {
-      width: 10%; } }
+      width: 15%; } }
 
 .view-pg-title {
   font-size: 32px;
@@ -338,7 +338,8 @@ body {
 
 .poem-title, .poem-title a {
   color: #D70026;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .poem-content {
   margin: auto; }
