@@ -23,8 +23,9 @@ button {
   background-color: transparent;
   border: solid #000B29 1px;
   margin: 10px;
-  width: 35%;
-  height: 42px;
+  width: 20%;
+  max-width: 200px;
+  padding: 5px 10px;
   font-size: 18px;
   transition: .3s; }
   button:hover {
@@ -33,7 +34,7 @@ button {
     border-radius: 5px; }
   @media only screen and (min-width: 675px) {
     button button {
-      width: 15%; } }
+      font-size: 12px; } }
 
 .view-pg-title {
   font-size: 32px;

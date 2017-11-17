@@ -29,8 +29,9 @@ button {
   background-color: transparent;
   border: solid $night 1px;
   margin: 10px;
-  width: 35%;
-  height: 42px;
+  width: 20%;
+  max-width: 200px;
+  padding: 5px 10px;
   font-size: 18px;
   transition: .3s;
   &:hover {
@@ -40,7 +41,7 @@ button {
   }
   @media only screen and (min-width: 675px){
     button {
-     width: 15%;
+     font-size: 12px;
     }
   }
 }
