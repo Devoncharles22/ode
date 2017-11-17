@@ -30,8 +30,7 @@ button {
   border: solid $night 1px;
   margin: 10px;
   width: 20%;
-  max-width: 200px;
-  padding: 5px 10px;
+  height: 8%;
   font-size: 18px;
   transition: .3s;
   &:hover {
@@ -41,7 +40,7 @@ button {
   }
   @media only screen and (min-width: 675px){
     button {
-     font-size: 12px;
+     font-size: 10px;
     }
   }
 }
